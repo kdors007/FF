@@ -7,8 +7,48 @@
 
 
 <p>
-	<%= link_to 'Would you rather...', '/posts'%>
-</p>
+<!-- 	<%= link_to 'Would you rather...', '/posts', :id => 'wyr' %>
+ --></p>
+
 <p>
-		<%= link_to 'Never have I ever...', '/nhieposts'%>
+		<%= link_to 'Never have I ever...', '/nhieposts', :id => 'nhie'%>
 </p>
+
+
+<% if current_user %>
+ 		<%= link_to 'Would you rather...', '/posts', :id => 'wyr' %>
+<% else %>
+<!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Would you rather...</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+<% end %>
+
+
+
+
+
+<!--  <%= link_to 'Login', '/login' %>  <%= link_to 'Signup', '/signup' %>  -->

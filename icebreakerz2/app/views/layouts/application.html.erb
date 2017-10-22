@@ -3,20 +3,23 @@
   <head>
     <title>Icebreakerz2</title>
     <%= csrf_meta_tags %>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class="container">
+  <div class="topnav" id="myTopnav">
+  <div class="nav_text">
  <% if current_user %>
-  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+  Signed in as <%= current_user.name %>  <%= link_to "Logout", '/logout' %>
 <% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+  <%= link_to 'Login', '/login' %>  <%= link_to 'Signup', '/signup' %> 
 <% end %>
-|
-<%= link_to "Home", '/'%>
 
+<%= link_to "Home", '/'%>
+</div></div></div>
 <%= yield %>
   </body>
 </html>
