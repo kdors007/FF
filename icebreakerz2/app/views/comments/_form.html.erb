@@ -1,7 +1,8 @@
 <%= form_for([@post,@post.comments.build]) do |f| %>
 	<p>
 		<%= f.label :name%><br>
-		<%= f.text_field :name%>
+		<%= current_user.name%>
+		<%= f.(current_user.id) :user_id %>
 	</p>
 	<p>
 		<%= f.text_area :body%>

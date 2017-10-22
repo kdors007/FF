@@ -1,5 +1,5 @@
 class NhiepostsController < ApplicationController
-  before_action :authorize
+
 
 
 def index

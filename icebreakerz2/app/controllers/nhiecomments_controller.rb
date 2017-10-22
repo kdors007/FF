@@ -1,5 +1,5 @@
 class NhiecommentsController < ApplicationController
-  before_action :authorize
+  
 
 	def create
 
