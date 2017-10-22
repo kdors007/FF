@@ -1,0 +1,21 @@
+<%= form_for @post do |f| %>
+
+	<p>
+		Would you rather...
+	</p>
+	<br>
+ 	<p>
+ 		<%= f.text_field :answer1%>
+ 	</p>
+ 	<p>
+ 	 or 
+ 	 </p>
+ 	<p>
+ 		<%= f.text_field :answer2%>
+ 	</p>
+ 	<br>
+ 	<p>
+ 		<%= f.submit "Submit" %>
+ 	</p>
+
+ 	<% end %>

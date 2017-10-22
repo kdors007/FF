@@ -1,0 +1,27 @@
+<div>
+	<h1> Question </h1>
+</div>
+
+<div>
+	Never have I ever...
+</div>
+
+<div>
+	<span>
+	<%= "#{@post.question}"%>
+	</span>
+</div>
+<br>
+<%= link_to "See another random question", @random_article %>
+<br>
+
+<h2>
+	<%= "#{@post.nhiecomments.count}"%> Comments
+</h2>
+	<%= render @post.nhiecomments%>
+	<h3>
+		Add a comment:
+	</h3>
+	<%= render "nhiecomments/form" %>
+
+
