@@ -12,11 +12,41 @@
 </p>
 
 <p>
-		<%= link_to 'Never have I ever...', '/nhieposts', :id => 'nhie'%>
+		 <%= link_to 'Never have I ever...', '/nhieposts', :id => 'nhie'%>
 </p>
 
+<<<<<<< HEAD
+=======
+<%if User.find(current_user.id).present?%>
+
+
+<% if current_user.present? %>
+ 		<%= link_to 'Would you rather...', '/posts', :id => 'wyr' %>
+<% else %>
+<!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">Would you rather...</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+
+>>>>>>> e914c2fcfa04a3d9664d9a1d317c5b36d4e4db90
     <div class="container">
     </div>
   </form>
 </div>
+<<<<<<< HEAD
 </div>
+=======
+<% end %>
+<%end%>
+
+
+
+
+<!--  <%= link_to 'Login', '/login' %>  <%= link_to 'Signup', '/signup' %>  -->
+>>>>>>> e914c2fcfa04a3d9664d9a1d317c5b36d4e4db90
