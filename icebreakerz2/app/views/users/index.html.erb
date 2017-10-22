@@ -11,11 +11,13 @@
  --></p>
 
 <p>
-		<%= link_to 'Never have I ever...', '/nhieposts', :id => 'nhie'%>
+		 <%= link_to 'Never have I ever...', '/nhieposts', :id => 'nhie'%>
 </p>
 
+<%if User.find(current_user.id).present?%>
 
-<% if current_user %>
+
+<% if current_user.present? %>
  		<%= link_to 'Would you rather...', '/posts', :id => 'wyr' %>
 <% else %>
 <!-- Button to open the modal login form -->
@@ -46,7 +48,7 @@ class="close" title="Close Modal">&times;</span>
   </form>
 </div>
 <% end %>
-
+<%end%>
 
 
 
