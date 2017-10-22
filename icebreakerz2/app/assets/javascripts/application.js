@@ -15,5 +15,11 @@
 //= require_tree .
 
 $(document).ready(function() {
+	$( "button" ).click(function() {
+		document.getElementById('id01').style.display='block'
+	});
 
+	$( "span" ).click(function() {
+		document.getElementById('id01').style.display='none'
+	});
 });
