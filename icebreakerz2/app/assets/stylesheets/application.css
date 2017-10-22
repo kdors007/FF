@@ -1,12 +1,11 @@
-
 /*Customize navigation here*/
 .topnav {
-	background-color: grey;
-	overflow: hidden;	
+    background-color: grey;
+    overflow: hidden;   
 }
 
 .nav_text a {
-	float: right;
+    float: right;
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -18,12 +17,12 @@
 
 /*root header*/
 h1 {
-	text-align: center;
+    text-align: center;
 }
 
 
 #wyr, button {
-	background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -36,7 +35,7 @@ h1 {
 } 
 
 #nhie {
-	background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -104,50 +103,16 @@ h1 {
     to {transform: scale(1)}
 }
 
-.container .mod_container {
-    height: 300px;
-    width: 200px
-}
-
-.center {
-    float: center;
-    text-align: center; 
-}
-
-label {
-    float: left;
-    clear: left;
-    display: block;
-    text-align: center;
-    line-height: 150%;
-    font-size: .85em; 
-    margin-left: 40%;
-    margin-right: 10px;
-    margin-bottom: 20px;
-}
-
-input {
-    float: left;
-    clear: right;
-    display: block;
-    text-align: center;
-    line-height: 150%;
-    font-size: .85em; 
-}
-
-.psw {
-    float: center;
-    clear: left;
-}
 
 
-.my_modal {
-    background-color: white;
-    border-radius: 5px;
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-}
+
+
+
+
+
+
+
+
 
 
 
