@@ -1,3 +1,5 @@
+
+
 /*Customize navigation here*/
 .topnav {
     background-color: grey;
@@ -45,6 +47,8 @@ h1 {
     font-size: 16px;
     float: inherit;
 }
+
+
 
 /* The Modal (background) */
 .modal {
@@ -104,9 +108,27 @@ h1 {
 }
 
 
+/**************************************************************/
+/*WYR Index page*/
+
+#instructions {
+    border: 5px;
+    padding: 50px;
+    width: 700px;
+    text-align: center;
+    margin: auto;
+}
 
 
 
+#WYRbox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
 
 
 

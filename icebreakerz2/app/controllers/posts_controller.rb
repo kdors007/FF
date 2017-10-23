@@ -28,8 +28,6 @@ def post_params
 
 end
 
-private
-
 def rando
 	@random_article = Post.order('random()').first
 end

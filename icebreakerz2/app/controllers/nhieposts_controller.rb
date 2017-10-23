@@ -25,11 +25,9 @@ private
 
 def post_params
 
-	params.require(:post).permit(:question)
+	params.require(:nhiepost).permit(:question)
 
 end
-
-private
 
 def rando
 	@random_article = Nhiepost.order('random()').first
