@@ -1,56 +1,136 @@
-<h1>Welcome to IceBreakerz</h1>
+<section class="clear">
+<h1>Welcome to IceBreakerz</h1><hr>
+<br>
+<h3>Pick a game</h3>
+<br>
 
+<% if current_user == false%>
 <div>
 	Please create an account to add content.
 </div>
+<% end %>
 
 
+<button id="clr">Would you rather...</button>
+<!-- <p> -->
+<!-- 	<%= link_to 'Would you rather...', '/posts', :id => 'wyr' %> -->	
+<!-- </p> -->
+<div class="divider"/>
+<button id="nhie">Never have I ever...</button>
 
-<p>
-<!-- 	<%= link_to 'Would you rather...', '/posts', :id => 'wyr' %>
- --></p>
-
-<p>
+<!-- <p>
 		<%= link_to 'Never have I ever...', '/nhieposts', :id => 'nhie'%>
-</p>
+</p> -->
 
 
-<% if current_user %>
- 		<%= link_to 'Would you rather...', '/posts', :id => 'wyr' %>
-<% else %>
-<!-- Button to open the modal login form -->
-<button>Would you rather...</button>
+</div>
+</section>
 
-<!-- The Modal -->
-<div id="id01" class="modal">
-  <span class="close" title="Close Modal">&times;</span>
+<section class="clear-comment">
+<div>
+	<h1> Question </h1>
+</div>
 
-  <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
-  
-    <div class="container mod_container my_modal">
-	  
-	     <p>Please sign in. Dont have an account? <a href="#">Sing up!</a></p>
-	      <div>
-	      <label><b>Username</b></label>
-	      <input type="text" placeholder="Enter Username" name="uname" required>
-	      </div>
-        <div>
-	      <label><b>Password</b></label>
-	      <input type="password" placeholder="Enter Password" name="psw" required>
-        </div>
-        <div>
-	      <button class="center" type="submit">Login</button>
-      	</div>
-        <div>
-      	<p class="psw"><br>Forgot <a href="#">password?</a></p>
-	    </div>
-      </div>
-    
+<div>
+	Would you rather...
+</div>
 
- </form>
-      </div>
+<div id='change'>
+<div id='change_ques'>
+	<span>
+	<%= "#{@post.answer1}"%>
+	</span>
+	<span>
+	or
+	</span>
+	<span>
+	<%= "#{@post.answer2}" %>		
+	</span>
+</div>
+</div>
+<br>
+<button id='new_ques'>See another random question</button>
+<button id="home">Home</button>
+<%= link_to "See another random question", @random_article %>
+<br>
+
+<h2>
+	<%= "#{@post.comments.count}"%> Comments
+</h2>
+	<%= render @post.comments%>
+	<h3>
+		Add a comment:
+	</h3>
+	<%= render "comments/form" %>
+</section> 
+
+<section id='wyr_go'>
+<h1>
+	Ready to play Would you Rather?
+</h1>
+
+<div id="instructions">
+If you are playing this game as an, on the spur of the moment party game, then there is no need to fret, if you do not have the board game version. You can follow a simple set of would you rather game rules to play it. The rules are very basic. One player is asked a question at one time. Once they have answered the question, the rest of the players answer the same question. If the majority is in agreement with the player, they get a point. The poll about the answer to the question should be anonymous to ensure fair play. There is no winner or loser in the game. It is just a fun twist to a normal truth or dare kind of a game.
+
+</div>
+
+<div id="WYRbox">
+<span>
+<%= link_to "Random Question", @random_article %>
+<button id=rand-q>Random Question</button>
+</span>
+<p></p>
+<span>
+		Add a Question:
+	<%= render "posts/form" %>
+</span>
+</div>
+</section>
+
+<section id=nhie_go>
+<div id='post'>
+<h1>
+	Ready to play Never have I ever?
+</h1>
+
+<%= link_to "Random Question", @random_article %>
+<button id='random' href="#">Random</button>
+	<h3>
+		Add a Question:
+	</h3>
+	<%= render "nhieposts/form" %>
+</div>
+</section>
+
+<section id="nhie_post">
+<div>
+	<h1> Question </h1>
+</div>
+
+<div>
+	Never have I ever...
+</div>
+
+<div>
+	<span class="change_nhie">
+	<%= "#{@post2.question}"%>
+	</span>
+</div>
+<br>
+<button id='new_nhie'>See another random question</button>
+<button id="home-nhie">Home</button>
 
 
+<%= link_to "See another random question", @random_article1 %>
+<br>
 
-<%end%>
+<h2>
+	<%= "#{@post2.nhiecomments.count}"%> Comments
+</h2>
+	<%= render @post2.nhiecomments %>
+	<h3>
+		Add a comment:
+	</h3>
+	<%= render "nhiecomments/form" %>
+</section>
+

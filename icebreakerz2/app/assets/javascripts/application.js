@@ -15,11 +15,72 @@
 //= require_tree .
 
 $(document).ready(function() {
-	$( "button" ).click(function() {
-		document.getElementById('id01').style.display='block'
+	
+	$('#wyr_go').hide();
+	$('#nhie_go').hide();
+	$('.clear-comment').hide();	
+	$('#nhie_post').hide();
+
+	if(sessionStorage.getItem("Show") == "true") {
+		$('.clear').hide();
+		$('#wyr_go').hide();
+		$('.clear-comment').show();
+	}
+
+	if(sessionStorage.getItem("Show") == "truthy") {
+		$('.clear').hide();
+		$('#nhie_go').hide();
+		$('#nhie_post').show();
+	}
+
+	if(sessionStorage.getItem("Show") == "false") {
+		$('.clear').show();
+		// $('#wyr_go').hide();
+		// $('.clear-comment').hide();
+	}
+
+
+	$( "#clr" ).click(function() {
+		sessionStorage.setItem("Show", "true");
+		$('.clear').hide();
+		$('#wyr_go').show();
 	});
 
-	$( "span" ).click(function() {
-		document.getElementById('id01').style.display='none'
+	$( "#nhie" ).click(function() {
+		sessionStorage.setItem("Show", "truthy");
+		$('.clear').hide();
+		$('#nhie_go').show();
 	});
+
+	$( "#rand-q" ).click(function() {
+		$('.clear-comment').show();
+		$('#wyr_go').hide();
+	});
+
+	$( "#random" ).click(function() {
+		$('#nhie_go').hide();
+		$('#nhie_post').show();
+	});
+
+	$( "#new_ques" ).click(function() {
+		$('#change_ques').remove();
+		location.reload();
+	});
+
+	$( "#new_nhie" ).click(function() {
+		$('#change_nhie').remove();
+		location.reload();
+	});
+
+	$( "#home" ).click(function() {
+		sessionStorage.setItem("Show", "false");
+		$('.clear-comment').hide();
+		$('.clear').show();
+		});
+
+	$( "#home-nhie" ).click(function() {
+		sessionStorage.setItem("Show", "false");
+		$('#nhie_post').hide();
+		$('.clear').show();
+		});
 });
