@@ -1,34 +1,39 @@
-@import “font-awesome”;
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 body {
-    background-color: #ccfffb;
+    background-color: #d3d3d3 ;
+}
+
+hr {
+    color: black;
 }
 /*Customize navigation here*/
-.topnav {
-    background-color: white;
+.navbar {
+    background-color: black;
     overflow: hidden;   
     opacity: .7;
     line-height: 100px;
     padding: 0;
-    width: 55.5vh;
-    margin: 0 0 1em 0;
+    width: 100%;
+    margin: 0;
     border-radius: 10px;
 }
 
 .nav_text a, .nav_text {
     float: left;
     display: flex;
-    color: #f2f2f2;
+    color: white;
     text-align: right;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 29px;
-    color: black;
 }
 
 /*root header*/
-h1, h3 {
+h1, h2 {
     text-align: center;
+    font-size: 60px;
 }
 
 
@@ -48,25 +53,40 @@ button {
     border-radius: 20px;
 } 
 
+button#new_ques {
+    margin-top: 40px;
+    height: 100px;
+    width: 300px;
+}
+
+path-container {
+    background-color: black;    
+    }
+
 .divider{
     width:500px;
     height:auto;
     display:inline-block;
 }
 
-#nhie, #clr {
-    background-color: #4CAF50; /* Green */
+#nhie, #clr, #rand-q {
+    background-color: red;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 60px;
     float: inherit;
+    margin-left: 0;
+    opacity: .7;
+    margin-top: 110px;
 }
 
-
+#rand-q {
+    margin-top: 0px;
+}
 
 /* The Modal (background) */
 .modal {
@@ -125,16 +145,15 @@ button {
     to {transform: scale(1)}
 }
 
-
 /**************************************************************/
 /*WYR Index page*/
 
 #instructions {
     border: 5px;
-    padding: 50px;
-    width: 700px;
+    padding: 40px;
     text-align: center;
     margin: auto;
+    font-size: 20px;
 }
 
 
@@ -148,10 +167,32 @@ button {
     padding: 10px;
 }
 
+button.btn.btn-primary.red_but {
+    background-color: red;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+button.btn {
+  height: 100%;
+  white-space: normal !important;
+}
+a.btn-group{
+ height: 100%;
+}
+
+.btn-group{
+ display: table;
+ height:150px;
+ text-align:center;
+}
 
 
-
-
+.fixedbutton {
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
+}
 
 
 

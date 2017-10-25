@@ -1,10 +1,11 @@
 <% if current_user %>
 <%= form_for([@post,@post.comments.build]) do |f| %>
-	<p>
-		<%= current_user.name%><br>
+	<div class="media-body">
+      <h3 class="media-heading">
+		<%= current_user.name%><br> </h3>
 		<%=  f.hidden_field :name, value: current_user.name%>
 		<%= f.hidden_field :user_id, value: current_user.id %>
-	</p>
+		<br>
 	<p>
 		<%= f.text_area :body%>
 	</p>
@@ -12,9 +13,14 @@
 	<p>
 		<%= f.submit "Submit" %>
 	</p>
+    </div>
+    </div>
+    </div>
 
 	<% end %>
 
 	<% else %>
 		<% nil %>
 	<% end %>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
