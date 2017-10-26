@@ -2,19 +2,19 @@ class NhiepostsController < ApplicationController
 
 
 def index
-	@post2 = Nhiepost.new
-    rando1()
+	@post = Nhiepost.new
+    rando()
 end
 
 def show
-	@post2 = Nhiepost.find(params[:id])
-	rando1()
+	@post = Nhiepost.find(params[:id])
+	rando()
 end
 
 def create
-	@post2 = Nhiepost.new(post2_params)
-	if @post2.save
-		redirect_to @post2
+	@post = Nhiepost.new(post_params)
+	if @post.save
+		redirect_to @post
 	else
 		render "new"
 	end
@@ -22,14 +22,14 @@ end
 
 private
 
-def post_params1
+def post_params
 
 	params.require(:nhiepost).permit(:question)
 
 end
 
-def rando1
-	@random_article1 = Nhiepost.order('random()').first
+def rando
+	@random_article = Nhiepost.order('random()').first
 end
 
 

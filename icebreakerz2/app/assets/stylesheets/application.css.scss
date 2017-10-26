@@ -1,6 +1,10 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+html, 
+body {
+    height: 100%;
+}
 body {
     background-color: #d3d3d3 ;
 }
@@ -31,11 +35,21 @@ hr {
 }
 
 /*root header*/
-h1, h2 {
+h1 {
     text-align: center;
     font-size: 60px;
 }
 
+h2 {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.comment {
+    margin-left: 40px;
+}
 
 button {
     background-color: #4CAF50; /* Green */
@@ -73,15 +87,22 @@ path-container {
     background-color: red;
     border: none;
     color: white;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 60px;
     float: inherit;
     margin-left: 0;
     opacity: .7;
     margin-top: 110px;
+}
+
+#home_button {
+    font-size: 60px;
+    margin-top: 10%;
+    left: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px
 }
 
 #rand-q {
@@ -170,13 +191,33 @@ path-container {
 button.btn.btn-primary.red_but {
     background-color: red;
     font-size: 30px;
-    margin-left: 50px;
+    margin-left: 25px;
+}
+
+button.btn.btn-primary.blue_but {
+    font-size: 30px;
+}
+
+button.btn.btn-primary.mid_but {
+    color: black;
+    background-color: #d3d3d3;
+    border: none;
+    font-size: 40px;
+    margin: none;
+    padding: none;
+    width: auto;
+}
+
+.but_col {
+    opacity: 1;
+    text-color: black;
 }
 
 button.btn {
   height: 100%;
   white-space: normal !important;
 }
+
 a.btn-group{
  height: 100%;
 }
@@ -195,6 +236,10 @@ a.btn-group{
 }
 
 
+a#rand {
+    font-size: 30px;
+    margin-left: 30%;
+}
 
 
 

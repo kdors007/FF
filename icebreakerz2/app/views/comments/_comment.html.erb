@@ -1,8 +1,106 @@
+<div class="media-body">
+      <h3 class="media-heading">
 <br>
-<%= comment.name %><Br>
+<%= comment.name %><br>
+</h3>
 <%= comment.body %><br>
-<%= time_ago_in_words(comment.created_at)%><Br>
+<%= time_ago_in_words(comment.created_at)%><br>
 <p>
+    </div>
+
 	<%= link_to "Delete", [comment.post,comment], method: :delete, data: {confirm: "Are you sure?"}%>
 </p>
 
+
+
+Please create an account to add content.
+
+
+<!-- WYR QUESTIONS -->
+<a class="fixedbutton">Home button here</a>
+
+<section class="clear-comment">
+   <div>
+      <h1>Would you rather...</h1>
+   </div>
+	      <hr>
+   	<div class="container">
+	   <div id='change'>
+	      <div id='change_ques'>
+	       <!--   <span>
+	         <%= "#{@post.answer1}"%>
+	         </span>
+	         <span>
+	         or
+	         </span>
+	         <span>
+	         <%= "#{@post.answer2}" %>		
+	         </span> -->
+	   <br>
+		<div class="btn-group">
+		    <button type="button" class="btn btn-primary red_but"><%= "#{@post.answer1}"%></button>
+
+		    <button type="button" class="btn btn-primary"><%= "#{@post.answer2}" %></button>
+	  	</div>
+	      </div>
+	   </div>
+
+	   <button id='new_ques'>See another random question</button>
+	   <button id="home">Home</button>
+   <br>
+   </div>
+   <hr>
+   <h2>
+      <%= "#{@post.comments.count}"%> Comments
+   </h2>
+   <%= render @post.comments%>
+   <h3>
+      Add a comment:
+   </h3>
+   <%= render "comments/form" %>
+</section>
+<!-- END -->
+
+<!-- WYR INSTRUCTIONS -->
+
+<!-- END -->
+
+<section id=nhie_go>
+   <div id='post'>
+      <h1>
+         Ready to play Never have I ever?
+      </h1>
+      <%= link_to "Random Question", @random_article %>
+      <button id='random' href="#">Random</button>
+      <h3>
+         Add a Question:
+      </h3>
+      <%= render "nhieposts/form" %>
+   </div>
+</section>
+<section id="nhie_post">
+   <div>
+      <h1> Question </h1>
+   </div>
+   <div>
+      Never have I ever...
+   </div>
+   <div>
+      <span class="change_nhie">
+      <%= "#{@post2.question}"%>
+      </span>
+   </div>
+   <br>
+   <button id='new_nhie'>See another random question</button>
+   <button id="home-nhie">Home</button>
+   <%= link_to "See another random question", @random_article1 %>
+   <br>
+   <h2>
+      <%= "#{@post2.nhiecomments.count}"%> Comments
+   </h2>
+   <%= render @post2.nhiecomments %>
+   <h3>
+      Add a comment:
+   </h3>
+   <%= render "nhiecomments/form" %>
+</section>

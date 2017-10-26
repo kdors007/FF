@@ -9,17 +9,17 @@
 
 <div>
 	<span>
-	<%= "#{@post2.question}"%>
+	<%= "#{@post.question}"%>
 	</span>
 </div>
 <br>
-<%= link_to "See another random question", @random_article1 %>
+<%= link_to "See another random question", @random_article %>
 <br>
 
 <h2>
-	<%= "#{@post2.nhiecomments.count}"%> Comments
+	<%= "#{@post.nhiecomments.count}"%> Comments
 </h2>
-	<%= render @post2.nhiecomments %>
+	<%= render '@post.nhiecomments' %>
 	<h3>
 		Add a comment:
 	</h3>

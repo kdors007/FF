@@ -2,12 +2,22 @@
 <h1>
 	Ready to play Never have I ever?
 </h1>
+<hr>
+<br>
+<div class="container">
+  		<div class="jumbotron">
+  		<h1>Instructions</h1>
+		   <div id="instructions">
+		      Game instructions
+		   </div>
+		  </div>
+		</div>
 
-<%= link_to "Random Question", @random_article %>
-<button id='random' href="#">Random</button>
+	<%= link_to '<button id="rand-q" type="button" class="btn btn-primary btn-block">Random Question</button>'.html_safe, @random_article %>
+	<div class="alert alert-info">
+      Add a Question! </div>
 	<h3>
 		Add a Question:
 	</h3>
 	<%= render "nhieposts/form" %>
 </div>
-

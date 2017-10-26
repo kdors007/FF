@@ -1,7 +1,7 @@
 <br>
-<%= nhiecomment.name%><Br>
-<%= nhiecomment.body%><br>
-<%= time_ago_in_words(nhiecomment.created_at)%><Br>
+<%= current_user.name%><Br>
+<%= nhiecomments.body%><br>
+<%= time_ago_in_words(nhiecomments.created_at)%><Br>
 <p>
-	<%= link_to "Delete", [nhiecomment.post,nhiecomment], method: :delete, data: {confirm: "Are you sure?"}%>
+	<%= link_to "Delete", [nhiecomment.post,comment], method: :delete, data: {confirm: "Are you sure?"}%>
 </p>

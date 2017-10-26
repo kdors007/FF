@@ -16,28 +16,28 @@
 
 $(document).ready(function() {
 	
-	$('#wyr_go').hide();
-	$('#nhie_go').hide();
-	$('.clear-comment').hide();	
-	$('#nhie_post').hide();
+	// $('#wyr_go').hide();
+	// $('#nhie_go').hide();
+	// $('.clear-comment').hide();	
+	// $('#nhie_post').hide();
 
-	if(sessionStorage.getItem("Show") == "true") {
-		$('.clear').hide();
-		$('#wyr_go').hide();
-		$('.clear-comment').show();
-	}
+	// if(sessionStorage.getItem("Show") == "true") {
+	// 	$('.clear').hide();
+	// 	$('#wyr_go').hide();
+	// 	$('.clear-comment').show();
+	// }
 
-	if(sessionStorage.getItem("Show") == "truthy") {
-		$('.clear').hide();
-		$('#nhie_go').hide();
-		$('#nhie_post').show();
-	}
+	// if(sessionStorage.getItem("Show") == "truthy") {
+	// 	$('.clear').hide();
+	// 	$('#nhie_go').hide();
+	// 	$('#nhie_post').show();
+	// }
 
-	if(sessionStorage.getItem("Show") == "false") {
-		$('.clear').show();
-		// $('#wyr_go').hide();
-		// $('.clear-comment').hide();
-	}
+	// if(sessionStorage.getItem("Show") == "false") {
+	// 	$('.clear').show();
+	// 	// $('#wyr_go').hide();
+	// 	// $('.clear-comment').hide();
+	// }
 
 
 	$( "#clr" ).click(function() {

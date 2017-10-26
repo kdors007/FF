@@ -1,31 +1,41 @@
-<div>
-	<h1> Question </h1>
-</div>
+<section class="clear-comment">
+   <div>
+      <h1>Would you rather...</h1>
+   </div>
+	      <hr><br>
+   	<div class="container">
+	   <div id='change'>
+	      <div id='change_ques'>
+	       <!--   <span>
+	         <%= "#{@post.answer1}"%>
+	         </span>
+	         <span>
+	         or
+	         </span>
+	         <span>
+	         <%= "#{@post.answer2}" %>		
+	         </span> -->
+	   <br>
+		<div class="btn-group">
+		    <button type="button" class="btn btn-primary red_but"><%= "#{@post.answer1}"%></button>
+		    <button type="button" class="btn btn-primary mid_but"><span class='but_col'><!-- <b>&lt;</b> --> OR	<!-- <b>&gt;</b> --></span></button>
+		    <button type="button" class="btn btn-primary blue_but"><%= "#{@post.answer2}" %></button>
+	  	</div>
+	      </div>
+	   </div>
 
-<div>
-	Would you rather...
-</div>
+   <br>
+   </div>
+		<%= link_to "See another random question", @random_article, :id => 'rand' %>	   
+   <hr>
+   <h2>
+      <%= "#{@post.comments.count}"%> Comments
+   </h2>
 
-<div>
-	<span>
-	<%= "#{@post.answer1}"%>
-	</span>
-	<span>
-	or
-	</span>
-	<span>
-	<%= "#{@post.answer2}" %>		
-	</span>
-</div>
-<br>
-<%= link_to "See another random question", @random_article %>
-<br>
-
-<h2>
-	<%= "#{@post.comments.count}"%> Comments
-</h2>
-	<%= render @post.comments%>
-	<h3>
-		Add a comment:
-	</h3>
-	<%= render "comments/form" %>
+   <%= render @post.comments %>
+  
+   <h3>
+      Add a comment:
+   </h3>
+   <%= render "comments/form" %>
+</section>
